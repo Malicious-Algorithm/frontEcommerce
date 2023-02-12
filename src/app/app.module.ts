@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './components/landing/landing.component';
 import { ShopComponent } from './components/shop/shop.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ProductsComponent } from './components/products/products.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,11 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ProductsComponent,
     FooterComponent,
     CheckoutComponent,
+    DetailsComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
-    AppRoutingModule,
     NgbModule,
   ],
   providers: [],

@@ -7,7 +7,7 @@
       "id": 3,
       "price": 999,
       "identifier": "iPhone 14 Pro 128GB",
-      "img": "./img/itemsShop/iphone3.jpeg"
+      "img": "../assets/img/itemsShop/iphone3.jpeg"
     },
     {
       "name": "iPhone 14 Pro",
@@ -16,7 +16,7 @@
       "id": 4,
       "price": 1599,
       "identifier": "iPhone 14 Pro 1TB",
-      "img": "./img/itemsShop/iphone4.jpeg"
+      "img": "../assets/img/itemsShopiphone4.jpeg"
     },
     {
       "name": "iPhone 14",
@@ -25,7 +25,7 @@
       "id": 5,
       "price": 1099,
       "identifier": "iPhone 14 512GB",
-      "img": "./img/itemsShop/iphone5.jpeg"
+      "img": "../assets/img/itemsShopiphone5.jpeg"
     },
     {
       "name": "iPhone 14",
@@ -34,7 +34,7 @@
       "id": 6,
       "price": 799,
       "identifier": "iPhone 14 128GB",
-      "img": "./img/itemsShop/iphone6.jpeg"
+      "img": "../assets/img/itemsShopiphone6.jpeg"
     },
     {
       "name": "AirPods",
@@ -43,7 +43,7 @@
       "id": 1,
       "price": 179,
       "identifier": "AirPods 3rd generation",
-      "img": "./img/itemsShop/airpods1.jpeg"
+      "img": "../assets/img/itemsShopairpods1.jpeg"
     },
     {
       "name": "AirPods Pro",
@@ -52,7 +52,7 @@
       "id": 2,
       "price": 249,
       "identifier": "AirPods Pro 2nd generation",
-      "img": "./img/itemsShop/airpods2.jpeg"
+      "img": "../assets/img/itemsShopairpods2.jpeg"
     },
     {
       "name": "AirPods",
@@ -61,7 +61,7 @@
       "id": 3,
       "price": 129,
       "identifier": "AirPods 2nd generation",
-      "img": "./img/itemsShop/airpods3.jpeg"
+      "img": "../assets/img/itemsShopairpods3.jpeg"
     },
     {
       "name": "14‑inch MacBook Pro - Space Gray",
@@ -70,7 +70,7 @@
       "id": 1,
       "price": 1999,
       "identifier": "14‑inch MacBook Pro 16GB 512GB",
-      "img": "./img/itemsShop/macbook1.jpeg"
+      "img": "../assets/img/itemsShopmacbook1.jpeg"
     },
     {
       "name": "14‑inch MacBook Pro - Space Gray",
@@ -79,7 +79,7 @@
       "id": 2,
       "price": 2599,
       "identifier": "14‑inch MacBook Pro 32GB 1TB",
-      "img": "./img/itemsShop/macbook2.jpeg"
+      "img": "../assets/img/itemsShopmacbook2.jpeg"
     },
     {
       "name": "16‑inch MacBook Pro - Space Gray",
@@ -88,7 +88,7 @@
       "id": 3,
       "price": 2499,
       "identifier": "16‑inch MacBook Pro 16GB 512GB",
-      "img": "./img/itemsShop/macbook3.jpeg"
+      "img": "../assets/img/itemsShopmacbook3.jpeg"
     },
     {
       "name": "16‑inch MacBook Pro - Space Gray",
@@ -97,7 +97,7 @@
       "id": 4,
       "price": 3099,
       "identifier": "16‑inch MacBook Pro 32GB 1TB",
-      "img": "./img/itemsShop/macbook4.jpeg"
+      "img": "../assets/img/itemsShopmacbook4.jpeg"
     },
     {
       "name": "MacBook Air - Midnight",
@@ -106,7 +106,7 @@
       "id": 5,
       "price": 1199,
       "identifier": "MacBook Air 8GB 256GB",
-      "img": "./img/itemsShop/macbook5.jpeg"
+      "img": "../assets/img/itemsShopmacbook5.jpeg"
     },
     {
       "name": "MacBook Air - Midnight",
@@ -115,7 +115,7 @@
       "id": 6,
       "price": 1599,
       "identifier": "MacBook Air 16GB 512GB",
-      "img": "./img/itemsShop/macbook6.jpeg"
+      "img": "../assets/img/itemsShopmacbook6.jpeg"
     },
     {
       "name": "iPad Air",
@@ -124,7 +124,7 @@
       "id": 1,
       "price": 599,
       "identifier": "iPad Air 64GB Wi-Fi",
-      "img": "./img/itemsShop/ipad1.jpeg"
+      "img": "../assets/img/itemsShopipad1.jpeg"
     },
     {
       "name": "iPad Air",
@@ -133,7 +133,7 @@
       "id": 2,
       "price": 899,
       "identifier": "iPad Air 258GB Wi-Fi + Celular",
-      "img": "./img/itemsShop/ipad2.jpeg"
+      "img": "../assets/img/itemsShopipad2.jpeg"
     },
     {
       "name": "iPad Pro",
@@ -142,7 +142,7 @@
       "id": 3,
       "price": 799,
       "identifier": "iPad Pro 11 128GB Wi-Fi",
-      "img": "./img/itemsShop/ipad3.jpeg"
+      "img": "../assets/img/itemsShopipad3.jpeg"
     },
     {
       "name": "iPad Pro",
@@ -151,7 +151,7 @@
       "id": 4,
       "price": 1699,
       "identifier": "iPad Pro 11 1TB Wi-Fi + Celular",
-      "img": "./img/itemsShop/ipad4.jpeg"
+      "img": "../assets/img/itemsShopipad4.jpeg"
     },
     {
       "name": "iPad Pro",
@@ -160,7 +160,7 @@
       "id": 5,
       "price": 1099,
       "identifier": "iPad Pro 12.9 128GB Wi-Fi",
-      "img": "./img/itemsShop/ipad5.jpeg"
+      "img": "../assets/img/itemsShopipad5.jpeg"
     },
     {
       "name": "iPad Pro",
@@ -169,7 +169,7 @@
       "id": 6,
       "price": 1999,
       "identifier": "iPad Pro 12.9 1TB Wi-Fi + Celular",
-      "img": "./img/itemsShop/ipad6.jpeg"
+      "img": "../assets/img/itemsShopipad6.jpeg"
     }
   ]
 }
