@@ -11,6 +11,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { DetailsComponent } from './components/details/details.component';
+import { ProductsContainerComponent } from './components/products-container/products-container.component';
+import { ProductsCardComponent } from './components/products-card/products-card.component';
+import { ProductsDescriptionCartComponent } from './components/products-description-cart/products-description-cart.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { DetailsComponent } from './components/details/details.component';
     FooterComponent,
     CheckoutComponent,
     DetailsComponent,
+    ProductsContainerComponent,
+    ProductsCardComponent,
+    ProductsDescriptionCartComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -1,0 +1,5 @@
+.items-container {
+  justify-content: space-around;
+  display: flex;
+  padding-bottom: 55px !important;
+}
