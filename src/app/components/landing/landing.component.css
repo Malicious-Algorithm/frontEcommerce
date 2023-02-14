@@ -60,7 +60,7 @@ iframe{
 .home-login{
     padding-top: 0.5em;
 }
-#featured-3 svg{
+#features svg{
     filter: invert(1) !important;
 }
 @media (max-width: 900px){
