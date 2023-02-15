@@ -19,7 +19,7 @@
 .buttons-details{
     width: 100% !important;
 }
-@media (max-width: 650px){
+@media (max-width: 500px){
     .detail-container{
         flex-direction: column;
     }

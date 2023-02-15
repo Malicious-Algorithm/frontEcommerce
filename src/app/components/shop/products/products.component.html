@@ -3,44 +3,46 @@
         <h1 class="fw-bold p-2 text-white">Three Shop</h1>
         <p class="lead fw-normal fst-italic pt-2 pb-1 text-white">Three clicks away from having your Apple products.</p>
         <h3 class="pt-0 pb-4 text-white">Add, sign and search.</h3>
-        <a class="btn btn-primary p-2 text-white" href="#elegi">Make an order</a>
+        <a class="btn btn-primary p-2 text-white" href="/shop#products">Make an order</a>
     </div>
     
-    <!-- shop title -->
-    <div class="container text-center pt-2 pb-1" id="elegi">
-        <h2>Elige tu categoria</h2>
-    </div>
+    <!-- 
+        shop title
+        <div class="container text-center pt-2 pb-1" id="elegi">
+            <h2>Elige tu categoria</h2>
+        </div>
+        
+        product type filter
+        <div class="container-fluid container overflow-hidden text-center d-flex justify-content-center aling-items-center pb-5 mt-2 mb-2 filter">
+            <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center" id="btn-airpods">
+                <img src="./assets/img/cards/card-airpods.png" class="p-3">
+                <span class="fw-bold filter-link">AirPods</span>
+            </div>
+            <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center" id="btn-iphone">
+                <img src="./assets/img/cards/card-iphone.png" class="p-3">
+                <span class="fw-bold filter-link">iPhone</span>
+            </div>
+            <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center" id="btn-ipad">
+                <img src="./assets/img/cards/card-ipad.png" class="p-3">
+                <span class="fw-bold filter-link">iPad</span>
+            </div>
+            <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center"  id="btn-macbook">
+                <img src="./assets/img/cards/card-mac.png" class="p-3">
+                <span class="fw-bold filter-link">MacBook</span>
+            </div>
+            <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center underline"  id="btn-todos">
+                <img src="./assets/img/cards/card-all.png" class="p-3">
+                <span class="fw-bold filter-link">Alls</span>
+            </div>
+        </div>
+     -->
     
-    <!-- product type filter -->
-    <div class="container-fluid container overflow-hidden text-center d-flex justify-content-center aling-items-center pb-5 mt-2 mb-2 filter">
-        <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center" id="btn-airpods">
-            <img src="./assets/img/cards/card-airpods.png" class="p-3">
-            <span class="fw-bold filter-link">AirPods</span>
-        </div>
-        <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center" id="btn-iphone">
-            <img src="./assets/img/cards/card-iphone.png" class="p-3">
-            <span class="fw-bold filter-link">iPhone</span>
-        </div>
-        <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center" id="btn-ipad">
-            <img src="./assets/img/cards/card-ipad.png" class="p-3">
-            <span class="fw-bold filter-link">iPad</span>
-        </div>
-        <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center"  id="btn-macbook">
-            <img src="./assets/img/cards/card-mac.png" class="p-3">
-            <span class="fw-bold filter-link">MacBook</span>
-        </div>
-        <div class="col-md-2 col-sm-5 rounded d-flex flex-column justify-content-center align-items-center underline"  id="btn-todos">
-            <img src="./assets/img/cards/card-all.png" class="p-3">
-            <span class="fw-bold filter-link">Alls</span>
-        </div>
-    </div>
-    
-    <app-products-container></app-products-container>
+    <app-products-container id="products"></app-products-container>
 
     <div class="container container-fluid d-flex justify-content-center align-items-center flex-column end-buy-container">
         <h2>Your total buy is $ 1399</h2>
         <p class="fw-lighter mt-2 text-center">Go cart to pay for get the products and enjoy the life!</p>
-        <button class="btn btn-primary fs-4 end-buy">End buy</button>
+        <button class="btn btn-primary fs-4 end-buy" routerLink="/shop/checkout">End buy</button>
     </div>
     
     <!-- 

@@ -15,6 +15,7 @@ import { ProductsContainerComponent } from './components/shop/products/products-
 import { ProductsCardComponent } from './components/shop/products/products-card/products-card.component';
 import { ProductsDescriptionCartComponent } from './components/shop/products/products-description-cart/products-description-cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     NgbModule,
     HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
