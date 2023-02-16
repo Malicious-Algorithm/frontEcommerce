@@ -1,8 +1,8 @@
 .hero-container-products {
   min-height: 80vh;
-  background-image: url("../../../../assets/img/hero.jpeg");
+  background-image: url("../../../../assets/img/ipados15__buajci0tqkly_large_2x.jpeg");
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   text-shadow: 10px 10px 50px #000000;
 }
@@ -24,7 +24,7 @@ h1 {
   width: 150px;
 }
 .end-buy-container {
-  min-height: 250px;
+  min-height: 350px;
   padding: 0 20px;
 }
 .end-buy {
