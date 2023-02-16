@@ -24,7 +24,6 @@ export class ProductsContainerComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
-    console.log('Add to cart', product);
     this.checkoutService.updateCart(product);
   }
 }

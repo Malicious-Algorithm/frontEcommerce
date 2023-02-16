@@ -37,9 +37,14 @@ export class CheckoutService {
       this.quantitySubject.next(0);
       this.products = [];
     }
+
+    getDiscount(): number {
+      const total = this.totalSubject.value;
+      return total * 0.1; // Retorna el 10% del totalSubject
+    }
   
     private addToCart(product: Product): void {
-      const isProductInCart = this.products.find(({ id }) => id === product.id)
+      const isProductInCart = this.products.find(({ id, category }) => id == product.id && category == product.category)
   
       if (isProductInCart) {
         isProductInCart.qty += 1;
@@ -58,6 +63,6 @@ export class CheckoutService {
     private calcTotal(): void {
       const total = this.products.reduce((acc, prod) => acc += (prod.price * prod.qty), 0);
       this.totalSubject.next(total);
-    }
+    } 
 
 }

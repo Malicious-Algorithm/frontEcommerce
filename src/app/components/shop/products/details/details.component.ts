@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../interfaces/products.interface';
 import { ShopService } from '../../services/products.service';
@@ -11,7 +11,8 @@ interface RouteParams {
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.css']
+  styleUrls: ['./details.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DetailsComponent implements OnInit {
   routeParams!: RouteParams;
@@ -21,13 +22,14 @@ export class DetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private shopService: ShopService
-  ) {}
+    private shopService: ShopService,
+  ) {
+
+  }
 
   ngOnInit(): void {
     this.categoryDetail = this.route.snapshot.paramMap.get('category')!;
     this.idDetail = this.route.snapshot.paramMap.get('id')!;
-
     this.shopService.getProducts().subscribe((products: Product[]) => {
       this.product = products.find(
         (product: Product) =>
@@ -35,7 +37,6 @@ export class DetailsComponent implements OnInit {
           product.id.toString() === this.idDetail
       );
     });
-    console.log(this.product)
   }
-}
 
+}
