@@ -7,16 +7,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './components/landing/landing.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ProductsComponent } from './components/shop/products/products.component';
+import { ProductsComponent } from './components/products/products.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CheckoutComponent } from './components/shop/checkout/checkout.component';
-import { DetailsComponent } from './components/shop/products/details/details.component';
-import { ProductsContainerComponent } from './components/shop/products/products-container/products-container.component';
-import { ProductsCardComponent } from './components/shop/products/products-card/products-card.component';
-import { ProductsDescriptionCartComponent } from './components/shop/products/products-description-cart/products-description-cart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { DetailsComponent } from './components/details/details.component';
+import { ProductsContainerComponent } from './components/products-container/products-container.component';
+import { ProductsCardComponent } from './components/products-card/products-card.component';
+import { ProductsDescriptionCartComponent } from './components/products-description-cart/products-description-cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { CheckoutCardComponent } from './components/shop/checkout/checkout-card/checkout-card.component';
+import { CheckoutCardComponent } from './components/checkout-card/checkout-card.component';
 
 @NgModule({
   declarations: [

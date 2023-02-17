@@ -8,6 +8,17 @@ import { Product } from '../interfaces/products.interface';
 export class ShopService {
   private products: Product[] = [
     {
+      name: 'iPhone 14 Pro Max',
+      description:
+        'Silver, 128GB, A15 Bionic chip, 6‑core CPU with 2 performance and 4 efficiency cores, 5‑core GPU, 16‑core Neural Engine',
+      category: 'iphone',
+      id: 3,
+      price: 1099,
+      identifier: 'iPhone 14 Pro Max 128GB',
+      img: '../../assets/img/itemsShop/iphone1.jpeg',
+      qty: 1,
+    },
+    {
       name: 'iPhone 14 Pro',
       description:
         'Silver, 128GB, A15 Bionic chip, 6‑core CPU with 2 performance and 4 efficiency cores, 5‑core GPU, 16‑core Neural Engine',

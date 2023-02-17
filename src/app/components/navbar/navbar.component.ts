@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CheckoutService } from '../shop/services/checkout.service';
+import { CheckoutService } from '../../services/checkout.service';
 
 @Component({
   selector: 'app-navbar',

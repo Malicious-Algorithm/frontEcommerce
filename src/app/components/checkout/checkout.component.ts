@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CheckoutService } from '../services/checkout.service';
+import { CheckoutService } from '../../services/checkout.service';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-checkout',
@@ -7,6 +8,20 @@ import { CheckoutService } from '../services/checkout.service';
   styleUrls: ['./checkout.component.css'],
 })
 export class CheckoutComponent implements OnInit {
+
+  public sendContainer = false;
+
+  public sendEmail(e: Event): void {
+    this.sendContainer = true;
+    e.preventDefault();
+    emailjs.sendForm('service_s2i6tdl', 'template_3nwt1ms', e.target as HTMLFormElement, 'sV9Ajqlig0lkp_0dX')
+      .then((result: EmailJSResponseStatus) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
+
   // traigo variable de service
   quantity$ = this.checkoutService.quantityAction$;
   total$ = this.checkoutService.totalAction$;
@@ -20,5 +35,6 @@ export class CheckoutComponent implements OnInit {
     // scroll hacia el top
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this.discount = this.checkoutService.getDiscount();
+
   }
 }
