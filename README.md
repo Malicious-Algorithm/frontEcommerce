@@ -27,3 +27,7 @@ See preview here: https://youtu.be/Yu7N4BPCo7A
 <img src="./src/assets/img/readme/readme9.png">
 
 <img src="./src/assets/img/readme/readme10.png">
+
+<img src="./src/assets/img/readme/readme11.png">
+
+<img src="./src/assets/img/readme/readme12.png">
