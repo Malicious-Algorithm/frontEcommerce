@@ -22,7 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",{
+              "src/assets",
+              {
                 "glob": "_redirects",
                 "input": "src",
                 "output": "/"
@@ -95,6 +96,14 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/my-app",
+            "netlifyToken": "WPhNd-d8iN7jt-co59aU7XA8vS4qn460rmmCZmt0hdc",
+            "siteId": "010faf01-3d1d-47b0-aeff-5de10c38ba23"
           }
         }
       }

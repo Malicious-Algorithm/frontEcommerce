@@ -39,18 +39,19 @@
     
     <app-products-container id="products"></app-products-container>
 
-    <div class="container container-fluid d-flex justify-content-center align-items-center flex-column end-buy-container">
-        <h2>Your total buy is $ 1399</h2>
-        <p class="fw-lighter mt-2 text-center">Go cart to pay for get the products and enjoy the life!</p>
-        <button class="btn btn-primary fs-2 end-buy" routerLink="/shop/checkout">End buy</button>
-    </div>
+    <ng-container *ngIf="{total: total$ | async} as dataCart">
+        <div class="container container-fluid d-flex justify-content-center align-items-center flex-column end-buy-container" *ngIf="dataCart.total !== 0">
+            <h2>Your total buy is $ {{dataCart.total}}</h2>
+            <p class="fw-lighter mt-2 text-center">Go cart to pay for get the products and enjoy the life!</p>
+            <button class="btn btn-primary fs-2 end-buy" routerLink="/shop/checkout">End buy</button>
+        </div>
+        
+        <div class="container container-fluid d-flex justify-content-center align-items-center flex-column end-buy-container" *ngIf="dataCart.total === 0">
+            <h2>Add items in your cart!</h2>
+            <p class="fw-lighter mt-2 text-center">Add products on the cart and go to pay for get the products!</p>
+        </div>
+    </ng-container>
     
-    <!-- 
-    <div class="container container-fluid d-flex justify-content-center align-items-center flex-column end-buy-container">
-        <h2>Add items in your cart!</h2>
-        <p class="fw-lighter mt-2 text-center">Add products on the cart and go to pay for get the products!</p>
-    </div>
-     -->
 
     <div class="bg-dark text-white container-fluid find-us">
         <h2 class="pt-2 pb-2 text-center">Find us here!</h2>
