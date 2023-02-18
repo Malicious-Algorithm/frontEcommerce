@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from '../../interfaces/products.interface';
-import { ShopService } from '../../services/products.service';
+import { Product } from '../../../interfaces/products.interface';
+import { ShopService } from '../../../services/products.service';
 
 interface RouteParams {
   category: string;

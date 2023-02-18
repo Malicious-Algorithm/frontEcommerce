@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CheckoutService } from '../../services/checkout.service';
+import { CheckoutService } from '../../../services/checkout.service';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
