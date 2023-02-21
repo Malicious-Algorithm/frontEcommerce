@@ -6,7 +6,7 @@ import { CheckoutService } from '../../../services/checkout.service';
 @Component({
   selector: 'app-products-container',
   template: `
-    <div class="overflow-hidden p-4 m-3 text-center bg-white p-2 gap-3 flex-wrap align-items-center m-auto items-container container" id="shop-items-container">
+    <div class="overflow-hidden m-3 text-center rounded shadow-lg p-4 gap-4 flex-wrap align-items-center m-auto items-container container" id="shop-items-container">
         <app-products-card (addToCartClick)="addToCart($event)" [product]="product" *ngFor="let product of products"></app-products-card>
     </div>
   `,
