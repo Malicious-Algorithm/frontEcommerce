@@ -5,15 +5,19 @@ import { DetailsComponent } from './components/shop/details/details.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { ProductsComponent } from './components/shop/products/products.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent},
+  { path: 'login', component: LoginComponent,pathMatch:"full"},
+  { path: 'signup', component: SignupComponent},
   { path: 'shop', component: ShopComponent,
   children: [
     { path: '', component: ProductsComponent },
     { path: 'checkout', component: CheckoutComponent },
     { path: 'details/:category/:id', component: DetailsComponent },
-  ]
+  ],
 },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

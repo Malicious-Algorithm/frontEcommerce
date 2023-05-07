@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Product } from '../../../../interfaces/products.interface';
+import { MisProductos } from 'src/app/interfaces/miProduct.interface';
+import { Producto } from 'src/app/interfaces/producto.interface';
 
 @Component({
   selector: 'app-products-card',
@@ -9,10 +10,11 @@ import { Product } from '../../../../interfaces/products.interface';
   // lo usamos para agregar los productos
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProductsCardComponent implements OnInit {
-  @Input() product!: Product;
 
-  @Output() addToCartClick = new EventEmitter<Product>();
+export class ProductsCardComponent implements OnInit {
+  @Input() product!: Producto;
+
+  @Output() addToCartClick = new EventEmitter<Producto>();
 
   onClick(): void {
     // Llamo al evento y emito enviandole el producto

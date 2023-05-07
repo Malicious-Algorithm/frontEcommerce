@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../interfaces/products.interface';
 import { ShopService } from '../../../services/products.service';
 import { CheckoutService } from '../../../services/checkout.service';
+import { MisProductos } from 'src/app/interfaces/miProduct.interface';
+import { Producto } from 'src/app/interfaces/producto.interface';
 
 @Component({
   selector: 'app-products-container',
@@ -13,17 +15,18 @@ import { CheckoutService } from '../../../services/checkout.service';
   styleUrls: ['./products-container.component.css']
 })
 export class ProductsContainerComponent implements OnInit {
-  products!: Product[];
+  products!: MisProductos[];
 
-  constructor(private shopService: ShopService, private checkoutService: CheckoutService) { }
+  constructor(private shopService: ShopService, private checkoutService: CheckoutService) {}
 
   ngOnInit(): void {
-    this.shopService.getProducts().subscribe((products) => {
-      this.products = products;
-    });
+    this.shopService.getProducts().subscribe((productsElements) => {
+      this.products = productsElements;
+    });    
   }
 
-  addToCart(product: Product): void {
-    this.checkoutService.updateCart(product);
+  addToCart(product: Producto,cantidad:number): void {
+    //this.checkoutService.updateCart(product);
+    this.checkoutService.agregarAlCarrito(product,1);
   }
 }

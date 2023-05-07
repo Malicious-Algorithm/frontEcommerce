@@ -16,6 +16,9 @@ import { ProductsCardComponent } from './components/shop/products-container/prod
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CheckoutCardComponent } from './components/shop/checkout/checkout-card/checkout-card.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,13 +33,16 @@ import { CheckoutCardComponent } from './components/shop/checkout/checkout-card/
     ProductsContainerComponent,
     ProductsCardComponent,
     CheckoutCardComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     NgbModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
