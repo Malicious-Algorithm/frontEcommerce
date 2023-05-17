@@ -1,22 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Product } from '../interfaces/products.interface';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { UsersService } from './login.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ShopService {
-
-  constructor(private http: HttpClient, private userService: UsersService) {}
-
-  public getProducts(): Observable<any>{
-    return this.http.get("http://localhost:9091/products/allProducts",{
+  
+  public getProducts2(): Observable<any>{
+    return this._route.get("http://localhost:9091/products/allProducts",{
       headers: {'Authorization':'Bearer '+this.userService.getToken()}
    }); 
   }
-  /*
+
   private products: Product[] = [
     {
       name: 'iPhone 14 Pro Max',
@@ -240,10 +238,9 @@ export class ShopService {
     },
   ];
 
-  constructor() {}
+  constructor(private _route: HttpClient,public userService: UsersService) {}
 
   getProducts(): Observable<Product[]> {
     return of(this.products);
   }
-  */
 }

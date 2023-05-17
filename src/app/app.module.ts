@@ -19,6 +19,8 @@ import { CheckoutCardComponent } from './components/shop/checkout/checkout-card/
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { CheckoutCard2Component } from './components/shop/checkout2/checkout-card2/checkout-card2.component';
+import { Checkout2Component } from './components/shop/checkout2/checkout2.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { FormsModule } from '@angular/forms';
     ProductsContainerComponent,
     ProductsCardComponent,
     CheckoutCardComponent,
+    Checkout2Component,
+    CheckoutCard2Component,
     LoginComponent,
     SignupComponent,
   ],

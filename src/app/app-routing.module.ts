@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CheckoutComponent } from './components/shop/checkout/checkout.component';
+import { Checkout2Component } from './components/shop/checkout2/checkout2.component';
+
 import { DetailsComponent } from './components/shop/details/details.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { ProductsComponent } from './components/shop/products/products.component';
@@ -15,10 +17,11 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent,
   children: [
     { path: '', component: ProductsComponent },
-    { path: 'checkout', component: CheckoutComponent },
+    { path: 'checkout2', component: Checkout2Component },
     { path: 'details/:category/:id', component: DetailsComponent },
   ],
 },
+  { path: 'shop/checkout2', component:Checkout2Component},
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

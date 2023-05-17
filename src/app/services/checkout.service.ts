@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Product } from "../interfaces/products.interface";
-import { MisProductos } from '../interfaces/miProduct.interface';
 import { Producto } from '../interfaces/producto.interface';
-import { Route } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { UsersService } from './login.service';
 
@@ -12,21 +10,25 @@ import { UsersService } from './login.service';
 })
 
 export class CheckoutService {
-  
-    products: MisProductos[];
-
-    constructor(private http:HttpClient, private userService:UsersService){}
-
-    agregarAlCarrito(producto: Producto,cantidad:number): Observable<any>{
-      return this.http.post("http://localhost:9094/carrito/addToCarrito", {producto,cantidad},{headers:{'Authorization':'Bearer '+this.userService.getToken()}});     
-    }
-
+    products: Product[] = [];
     
-/*
-    private cartSubject = new BehaviorSubject<MisProductos[]>([]);
+
+    private cartSubject = new BehaviorSubject<Product[]>([]);
     private totalSubject = new BehaviorSubject<number>(0);
     private quantitySubject = new BehaviorSubject<number>(0);
   
+    //mi codigo
+    constructor(private http:HttpClient,private userService:UsersService){}
+    agregarAlCarrito(producto: number, cantidad:number): Observable<any>{
+      console.log("voy a agregar el producto con id: "+producto+" y cantidad: "+cantidad);
+      return this.http.post("http://localhost:9094/carrito/addToCarrito",{'productId':producto,'cantidad':cantidad},{headers:{'Authorization':'Bearer '+this.userService.getToken()}});
+    };
+    getCarritoAllProductsByIdUser(): Observable<any>{
+      return this.http.get("http://localhost:9094/carrito/getCarritoAllProductsByIdUser",{headers:{'Authorization':'Bearer '+this.userService.getToken()}});
+    };
+    //FIN MI CODIGO
+
+
     // Cuando trabajamos con un observable le colocamos un simbolo de dolar al final
     // Estos observables le decimos que esten disponibles para utilizarlos dentro de la app
     get totalAction$(): Observable<number> {
@@ -35,11 +37,11 @@ export class CheckoutService {
     get quantityAction$(): Observable<number> {
       return this.quantitySubject.asObservable();
     }
-    get cartAction$(): Observable<MisProductos[]> {
+    get cartAction$(): Observable<Product[]> {
       return this.cartSubject.asObservable();
     }
   
-    updateCart(product: MisProductos): void {
+    updateCart(product: Product): void {
       this.addToCart(product);
       this.quantityProducts();
       this.calcTotal();
@@ -57,8 +59,8 @@ export class CheckoutService {
       return total * 0.1; // Retorna el 10% del totalSubject
     }
   
-    private addToCart(product: MisProductos): void {
-      const isProductInCart = this.products.find(({ producto, categoria }) => producto.id === product.producto.id && categoria.id === product.categoria.id);
+    private addToCart(product: Product): void {
+      const isProductInCart = this.products.find(({ id, category }) => id == product.id && category == product.category)
   
       if (isProductInCart) {
         isProductInCart.qty += 1;
@@ -78,5 +80,5 @@ export class CheckoutService {
       const total = this.products.reduce((acc, prod) => acc += (prod.price * prod.qty), 0);
       this.totalSubject.next(total);
     } 
-*/
+
 }
